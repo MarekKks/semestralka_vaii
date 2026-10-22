@@ -1,0 +1,92 @@
+:root {
+  --color-header-bg: #1f2937;
+  --color-logo-bg: #374151;
+  --color-nav-text: #e5e7eb;
+  --color-header-text: #ffffff;
+
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-text: #ffffff;
+
+  --color-page-bg: #f3f4f6;
+  --color-card-bg: #ffffff;
+  --color-border: #e5e7eb;
+  --color-input-border: #d1d5db;
+
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+
+  --color-success: #16a34a;
+  --color-success-bg: #dcfce7;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fee2e2;
+}
+
+.hlavna-navigacia {
+  background-color: var(--color-header-bg);
+  color: var(--color-nav-text);
+  height: 60px;
+}
+
+a.navigacia-link {
+  color: var(--color-nav-text) !important;
+  text-decoration: none !important;
+}
+
+.navigacia-link {
+    padding: 0.5rem 0.75rem;
+    color: var(--color-nav-text);
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.logo {
+    background: var(--color-logo-bg);
+    color: var(--color-header-text);
+}
+
+.navigacia-link.active {
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+.odhlasit {
+    border-color: var(--color-header-text);
+    color: var(--color-header-text);
+}
+
+.dvojica {
+    color: var(--color-text);
+}
+
+.stav {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: right;
+}
+
+.ok{
+    color: var(--color-success);
+}
+
+.chyba {
+    color: var(--color-danger);
+}
+
+.vysledky {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.polozka {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+}
+
+.dovod {
+    width: 100%;
+    color: var(--color-danger);
+}

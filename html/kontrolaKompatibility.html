@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Hlavna stranka</title>
+</head>
+<body>
+
+<header class="container-fluid row justify-content-between hlavna-navigacia">
+    
+    <div class="col-auto d-flex align-items-center gap-5">
+        <a class="navigacia-link logo" href="index.html">PCBuilder</a>
+        <nav class="d-flex gap-3 navigacia">
+            <a class="navigacia-link" href="index.html">Katalóg</a>
+            <a class="navigacia-link" href="kontrolaKompatibility.html">Kontrola kompatibility</a>
+            <a class="navigacia-link" href="#">Správa</a>
+        </nav>
+    </div>
+    <div class="col-auto d-flex align-items-center gap-4 uzivatel">
+        <span class="meno">Meno používateľa</span>
+        <a href="#" class="navigacia-link odhlasit">Odhlásiť</a>
+    </div>
+</header>
+
+
+<main class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <section class="formular">
+                <h1 class="mb-4">Kontrola kompatibility</h1>
+         
+                <form action="#" method="post" class="mb-4">
+                    <div class="mb-3">
+                        <label for="procesor" class="form-label">Procesor</label>
+                        <select id="procesor" name="procesor" class="form-select">
+                            <option value="">Vyberte...</option>
+                            <option value="1">AMD Ryzen 5 7600</option>
+                            <option value="2">Intel Core i5-13400F</option>
+                        </select>
+                    </div>
+         
+                    <div class="mb-3">
+                        <label for="doska" class="form-label">Základná doska</label>
+                        <select id="doska" name="doska" class="form-select">
+                            <option value="">Vyberte...</option>
+                            <option value="1">ASUS TUF Gaming B650-PLUS</option>
+                            <option value="2">MSI PRO Z790-P</option>
+                        </select>
+                    </div>
+         
+                    <div class="mb-3">
+                        <label for="ram" class="form-label">Pamäť RAM</label>
+                        <select id="ram" name="ram" class="form-select">
+                            <option value="">Vyberte...</option>
+                            <option value="1">Kingston Fury 16 GB DDR5</option>
+                            <option value="2">Corsair Vengeance 16 GB DDR4</option>
+                        </select>
+                    </div>
+         
+                    <button type="submit" class="btn btn-primary w-100">Skontrolovať</button>
+                </form>
+            </section>
+         
+            <section class="p-3 bg-light border rounded">
+                <h2 class="h4 mb-3">Výsledok</h2>
+         
+                <ul class="vysledky">
+                    <li class="polozka">
+                        <span class="dvojica">Procesor – Základná doska</span>
+                        <span class="stav ok">✓ Kompatibilné</span>
+                    </li>
+                    <li class="polozka">
+                        <span class="dvojica">Základná doska – RAM</span>
+                        <span class="stav chyba">✗ Nekompatibilné</span>
+                        <small class="dovod">Typ pamäte nesedí.</small>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</main>
+
+    
+</body>
+</html>
