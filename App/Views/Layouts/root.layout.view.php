@@ -29,7 +29,7 @@
         <nav class="d-flex gap-2 navigacia">
             <a class="navigacia-link " href="<?= $link->url("home.index") ?>">Katalóg</a>
             <a class="navigacia-link " href="<?= $link->url('home.compatibility') ?>">Kontrola kompatibility</a>
-            <a class="navigacia-link " href="#">Správa</a>
+            <a class="navigacia-link" href="<?= $link->url('komponent.index') ?>">Správa</a>
         </nav>
     </div>
     <div class="d-flex align-items-center gap-3 uzivatel">
