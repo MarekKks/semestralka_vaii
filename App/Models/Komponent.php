@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use Framework\Core\Model;
+
 class Komponent extends Model
 {
-
     protected ?int $id = null;
     protected ?int $kategoria_id = null;
     protected ?int $vyrobca_id = null;
