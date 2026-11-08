@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-
 use Framework\Core\Model;
 
 class Komponent extends Model
@@ -14,7 +13,6 @@ class Komponent extends Model
     protected ?float $cena = null;
     protected ?string $patica = null;
     protected ?string $typ_pamate = null;
-
     protected static ?array $fillable = [
         'kategoria_id',
         'vyrobca_id',
