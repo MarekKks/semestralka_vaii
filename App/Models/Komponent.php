@@ -15,6 +15,16 @@ class Komponent extends Model
     protected ?string $patica = null;
     protected ?string $typ_pamate = null;
 
+    protected static ?array $fillable = [
+        'kategoria_id',
+        'vyrobca_id',
+        'nazov',
+        'popis',
+        'cena',
+        'patica',
+        'typ_pamate',
+    ];
+
     public function getId(): ?int
     {
         return $this->id;
