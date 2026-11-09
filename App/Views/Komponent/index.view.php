@@ -2,6 +2,7 @@
 
 /** @var \App\Models\Komponent[] $komponenty */
 /** @var Framework\Support\LinkGenerator $link */
+/** @var array $kategorie */
 ?>
 
 <div class="container py-4">
@@ -20,6 +21,7 @@
                     <th>Cena</th>
                     <th>Patica</th>
                     <th>RAM</th>
+                    <th>Kategória</th>
                     <th class="text-end">Akcie</th>
                 </tr>
                 </thead>
@@ -31,6 +33,7 @@
                         <td><?= number_format($k->getCena(), 2, ',', ' ') ?> €</td>
                         <td><?= e($k->getPatica() ?? '-') ?></td>
                         <td><?= e($k->getTypPamate() ?? '-') ?></td>
+                        <td><?= e($kategorie[$k->getKategoriaId()] ?? '-') ?></td>
                         <td class="text-end">
                             <div class="d-flex gap-2 justify-content-end">
                                 <a href="<?= $link->url('komponent.edit', ['id' => $k->getId()]) ?>" class="btn btn-sm btn-primary">Upraviť</a>

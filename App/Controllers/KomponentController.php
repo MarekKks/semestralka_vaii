@@ -2,11 +2,13 @@
 
 namespace App\Controllers;
 
+use App\Models\Kategoria;
 use App\Models\Komponent;
 use Framework\Core\BaseController;
 use Framework\Http\HttpException;
 use Framework\Http\Request;
 use Framework\Http\Responses\Response;
+
 /**
  * Class KomponentController
  *
@@ -16,17 +18,31 @@ class KomponentController extends BaseController
 {
     public function index(Request $request): Response
     {
-        return $this->html(['komponenty' => Komponent::getAll()]);
+        $nazvy = [];
+        foreach (Kategoria::getAll() as $kategoria) {
+            $nazvy[$kategoria->getId()] = $kategoria->getNazov();
+        }
+
+        return $this->html([
+            'komponenty' => Komponent::getAll(),
+            'kategorie' => $nazvy,
+        ]);
     }
 
     public function add(Request $request): Response
     {
-        return $this->html(['komponent' => new Komponent()]);
+        return $this->html([
+            'komponent' => new Komponent(),
+            'kategorie' => Kategoria::getAll(),
+        ]);
     }
 
     public function edit(Request $request): Response
     {
-        return $this->html(['komponent' => $this->findKomponent($request)]);
+        return $this->html([
+            'komponent' => $this->findKomponent($request),
+            'kategorie' => Kategoria::getAll(),
+        ]);
     }
 
     public function save(Request $request): Response
